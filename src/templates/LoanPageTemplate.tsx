@@ -18,13 +18,13 @@ interface LoanPageData {
     whoIsItFor: string[];
     keyBenefits: { title: string; description: string }[];
     qualificationOverview: string[];
-    downPaymentInfo: string;
-    creditRequirements: string;
-    occupancyTypes: string[];
-    propertyTypes: string[];
-    pros: string[];
-    tradeoffs: string[];
-    commonScenarios: { title: string; description: string }[];
+    downPaymentInfo?: string;
+    creditRequirements?: string;
+    occupancyTypes?: string[];
+    propertyTypes?: string[];
+    pros?: string[];
+    tradeoffs?: string[];
+    commonScenarios?: { title: string; description: string }[];
     documentsNeeded: string[];
     faqs: { question: string; answer: string }[];
     relatedProducts: RelatedProduct[];
@@ -74,24 +74,34 @@ export default function LoanPageTemplate({ data }: { data: LoanPageData }) {
 
                             {/* Qualification */}
                             <h2>Qualification at a Glance</h2>
-                            <div className={styles.qualGrid}>
-                                <div className={styles.qualItem}>
-                                    <span className={styles.qualLabel}>Credit</span>
-                                    <span className={styles.qualValue}>{data.creditRequirements}</span>
+                            {(data.creditRequirements || data.downPaymentInfo || data.occupancyTypes || data.propertyTypes) && (
+                                <div className={styles.qualGrid}>
+                                    {data.creditRequirements && (
+                                        <div className={styles.qualItem}>
+                                            <span className={styles.qualLabel}>Credit</span>
+                                            <span className={styles.qualValue}>{data.creditRequirements}</span>
+                                        </div>
+                                    )}
+                                    {data.downPaymentInfo && (
+                                        <div className={styles.qualItem}>
+                                            <span className={styles.qualLabel}>Down Payment</span>
+                                            <span className={styles.qualValue}>{data.downPaymentInfo}</span>
+                                        </div>
+                                    )}
+                                    {data.occupancyTypes && (
+                                        <div className={styles.qualItem}>
+                                            <span className={styles.qualLabel}>Occupancy</span>
+                                            <span className={styles.qualValue}>{data.occupancyTypes.join(', ')}</span>
+                                        </div>
+                                    )}
+                                    {data.propertyTypes && (
+                                        <div className={styles.qualItem}>
+                                            <span className={styles.qualLabel}>Property Types</span>
+                                            <span className={styles.qualValue}>{data.propertyTypes.join(', ')}</span>
+                                        </div>
+                                    )}
                                 </div>
-                                <div className={styles.qualItem}>
-                                    <span className={styles.qualLabel}>Down Payment</span>
-                                    <span className={styles.qualValue}>{data.downPaymentInfo}</span>
-                                </div>
-                                <div className={styles.qualItem}>
-                                    <span className={styles.qualLabel}>Occupancy</span>
-                                    <span className={styles.qualValue}>{data.occupancyTypes.join(', ')}</span>
-                                </div>
-                                <div className={styles.qualItem}>
-                                    <span className={styles.qualLabel}>Property Types</span>
-                                    <span className={styles.qualValue}>{data.propertyTypes.join(', ')}</span>
-                                </div>
-                            </div>
+                            )}
                             <h3>General Requirements</h3>
                             <ul className={styles.list}>
                                 {data.qualificationOverview.map((item, i) => (
@@ -100,35 +110,45 @@ export default function LoanPageTemplate({ data }: { data: LoanPageData }) {
                             </ul>
 
                             {/* Pros and Tradeoffs */}
-                            <div className={styles.prosConsGrid}>
-                                <div className={styles.prosCard}>
-                                    <h3>Advantages</h3>
-                                    <ul>
-                                        {data.pros.map((pro, i) => (
-                                            <li key={i}><span className={styles.proIcon}>✓</span> {pro}</li>
-                                        ))}
-                                    </ul>
+                            {(data.pros || data.tradeoffs) && (
+                                <div className={styles.prosConsGrid}>
+                                    {data.pros && (
+                                        <div className={styles.prosCard}>
+                                            <h3>Advantages</h3>
+                                            <ul>
+                                                {data.pros.map((pro, i) => (
+                                                    <li key={i}><span className={styles.proIcon}>✓</span> {pro}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
+                                    {data.tradeoffs && (
+                                        <div className={styles.consCard}>
+                                            <h3>Tradeoffs to Consider</h3>
+                                            <ul>
+                                                {data.tradeoffs.map((con, i) => (
+                                                    <li key={i}><span className={styles.conIcon}>↔</span> {con}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    )}
                                 </div>
-                                <div className={styles.consCard}>
-                                    <h3>Tradeoffs to Consider</h3>
-                                    <ul>
-                                        {data.tradeoffs.map((con, i) => (
-                                            <li key={i}><span className={styles.conIcon}>↔</span> {con}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
+                            )}
 
                             {/* Common Scenarios */}
-                            <h2>Common Scenarios</h2>
-                            <div className={styles.scenarioList}>
-                                {data.commonScenarios.map((scenario, i) => (
-                                    <div key={i} className={styles.scenarioItem}>
-                                        <h4>{scenario.title}</h4>
-                                        <p>{scenario.description}</p>
+                            {data.commonScenarios && data.commonScenarios.length > 0 && (
+                                <>
+                                    <h2>Common Scenarios</h2>
+                                    <div className={styles.scenarioList}>
+                                        {data.commonScenarios.map((scenario, i) => (
+                                            <div key={i} className={styles.scenarioItem}>
+                                                <h4>{scenario.title}</h4>
+                                                <p>{scenario.description}</p>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
-                            </div>
+                                </>
+                            )}
 
                             {/* Documents Needed */}
                             <h2>Documents Typically Needed</h2>

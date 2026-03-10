@@ -20,6 +20,8 @@ const calculators = [
     { icon: '🏡', title: 'Rent vs Buy', description: 'Compare the long-term costs of renting vs. buying a home.', href: '/calculators/rent-vs-buy-calculator' },
     { icon: '🏢', title: 'SBA Loan Calculator', description: 'Estimate monthly payments for SBA 7(a) and SBA 504 loans.', href: '/calculators/sba-loan-calculator' },
     { icon: '📝', title: 'Closing Costs', description: 'Estimate your closing costs for a purchase or refinance with line-item detail.', href: '/calculators/closing-costs-calculator' },
+    { icon: '🎖️', title: 'VA Affordability', description: 'See how much home you can afford with $0 down and no PMI using your VA benefit.', href: '/calculators/va-affordability-calculator' },
+    { icon: '💲', title: 'VA Funding Fee', description: 'Calculate your VA funding fee based on loan type, service history, and disability exemptions.', href: '/calculators/va-funding-fee-calculator' },
 ];
 
 export default function CalculatorsPage() {
