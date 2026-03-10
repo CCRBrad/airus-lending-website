@@ -1,0 +1,71 @@
+.storySection {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+}
+
+@media (min-width: 768px) {
+    .storySection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.storySection p {
+    color: var(--color-gray-600);
+    font-size: var(--font-size-base);
+    line-height: 1.8;
+}
+
+.valuesHeader {
+    text-align: center;
+    margin-bottom: var(--space-10);
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+    .valuesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .valuesGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.valueCard {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    text-align: center;
+    transition: all var(--transition-base);
+}
+
+.valueCard:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.valueIcon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: var(--space-4);
+}
+
+.valueCard h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-2);
+}
+
+.valueCard p {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    line-height: 1.6;
+}

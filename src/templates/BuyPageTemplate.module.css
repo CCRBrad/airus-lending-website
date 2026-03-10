@@ -1,0 +1,103 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 340px;
+    }
+}
+
+.overview {
+    font-size: var(--font-size-lg);
+    color: var(--color-gray-600);
+    line-height: 1.8;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+}
+
+.list li {
+    position: relative;
+    padding-left: var(--space-6);
+    font-size: var(--font-size-base);
+    color: var(--color-gray-700);
+    line-height: 1.6;
+}
+
+.list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-success);
+    font-weight: 700;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+@media (min-width: 1024px) {
+    .sidebar {
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-6));
+        align-self: flex-start;
+    }
+}
+
+.sidebarCard {
+    background: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+}
+
+.sidebarCard h4 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-4);
+}
+
+.sidebarCard>p {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-4);
+}
+
+.relatedList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.relatedList li a {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: background var(--transition-fast);
+}
+
+.relatedList li a:hover {
+    background: var(--color-gray-50);
+}
+
+.relatedList li a strong {
+    font-size: var(--font-size-sm);
+    color: var(--color-navy);
+}
+
+.relatedList li a span {
+    font-size: var(--font-size-xs);
+    color: var(--color-gray-500);
+}

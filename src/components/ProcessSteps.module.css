@@ -1,0 +1,67 @@
+.header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.subtitle {
+    color: var(--color-gray-500);
+    font-size: var(--font-size-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.steps {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.step {
+    display: flex;
+    gap: var(--space-6);
+}
+
+.numberWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--color-blue);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.connector {
+    width: 2px;
+    flex: 1;
+    background: var(--color-gray-200);
+    min-height: 40px;
+}
+
+.content {
+    padding-bottom: var(--space-8);
+}
+
+.stepTitle {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--space-2);
+}
+
+.stepDesc {
+    color: var(--color-gray-600);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+}
