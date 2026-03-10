@@ -10,6 +10,69 @@
   margin: 0 auto;
 }
 
+/* Calculator Quick-Access Cards */
+.calcGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .calcGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.calcCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+}
+
+.calcCard:hover {
+  border-color: var(--color-blue);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.calcIcon {
+  font-size: 40px;
+  margin-bottom: var(--space-4);
+}
+
+.calcTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+}
+
+.calcDesc {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-500);
+  line-height: 1.5;
+  margin-bottom: var(--space-4);
+}
+
+.calcArrow {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-blue);
+  transition: transform var(--transition-fast);
+}
+
+.calcCard:hover .calcArrow {
+  transform: translateX(3px);
+}
+
 /* Loan Program Cards */
 .programGrid {
   display: grid;
@@ -87,7 +150,220 @@
   margin-top: var(--space-8);
 }
 
-/* Why Section */
+/* VA Loan Spotlight */
+.vaSection {
+  padding: var(--space-16) 0;
+  background: linear-gradient(135deg, #0a1929 0%, #0f2847 50%, #132f4c 100%);
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+
+.vaSection::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(212, 168, 83, 0.08), transparent 70%);
+  pointer-events: none;
+}
+
+.vaInner {
+  position: relative;
+  z-index: 1;
+}
+
+.vaContent {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vaBadge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  background: rgba(212, 168, 83, 0.15);
+  border: 1px solid rgba(212, 168, 83, 0.3);
+  color: var(--color-gold);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-6);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.vaContent h2 {
+  font-size: var(--font-size-4xl);
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .vaContent h2 {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+.vaSubtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-300);
+  line-height: 1.7;
+  margin-bottom: var(--space-10);
+}
+
+.vaBenefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  text-align: left;
+  max-width: 560px;
+  margin: 0 auto var(--space-10);
+}
+
+@media (min-width: 640px) {
+  .vaBenefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.vaBenefit {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+
+.vaBenefitIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.vaBenefit strong {
+  display: block;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.vaBenefit p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+  line-height: 1.4;
+}
+
+.vaActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 480px) {
+  .vaActions {
+    flex-direction: row;
+  }
+}
+
+/* Broker vs Bank Comparison Table */
+.compareTable {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.compareHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: rgba(255, 255, 255, 0.06);
+  padding: var(--space-4) var(--space-5);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.compareRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  transition: background 0.2s;
+}
+
+.compareRow:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.compareFeature {
+  font-weight: 600;
+  color: var(--color-gray-300);
+}
+
+.compareBroker {
+  color: var(--color-white);
+}
+
+.compareBank {
+  color: var(--color-gray-500);
+}
+
+.checkIcon {
+  color: #4ade80;
+  font-weight: 700;
+  margin-right: var(--space-1);
+}
+
+.xIcon {
+  color: #ef4444;
+  font-weight: 700;
+  margin-right: var(--space-1);
+}
+
+@media (max-width: 640px) {
+
+  .compareHeader,
+  .compareRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .compareHeader .compareFeature,
+  .compareRow .compareFeature {
+    display: none;
+  }
+
+  .compareBroker::before {
+    content: 'BROKER: ';
+    font-weight: 700;
+    color: var(--color-blue-light);
+  }
+
+  .compareBank::before {
+    content: 'BANK: ';
+    font-weight: 700;
+    color: var(--color-gray-500);
+  }
+}
+
+/* Why Section (now on white background) */
 .whyGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -117,13 +393,13 @@
 }
 
 .whyCard h3 {
-  color: var(--color-white);
+  color: var(--color-navy);
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-3);
 }
 
 .whyCard p {
-  color: var(--color-gray-400);
+  color: var(--color-gray-600);
   font-size: var(--font-size-sm);
   line-height: 1.6;
 }

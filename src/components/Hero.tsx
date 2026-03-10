@@ -9,6 +9,8 @@ interface HeroProps {
     secondaryCTA?: { label: string; href: string };
     variant?: 'home' | 'dark' | 'light';
     align?: 'center' | 'left';
+    trustBadges?: string[];
+    children?: React.ReactNode;
 }
 
 export default function Hero({
@@ -19,6 +21,8 @@ export default function Hero({
     secondaryCTA = { label: 'Talk to an Advisor', href: '/book-consultation' },
     variant = 'dark',
     align = 'center',
+    trustBadges,
+    children,
 }: HeroProps) {
     return (
         <section className={`${styles.hero} ${styles[variant]} ${styles[`align-${align}`]}`}>
@@ -43,6 +47,14 @@ export default function Hero({
                             </Link>
                         )}
                     </div>
+                    {trustBadges && trustBadges.length > 0 && (
+                        <div className={styles.trustRow}>
+                            {trustBadges.map((b, i) => (
+                                <span key={i} className={styles.trustBadge}>{b}</span>
+                            ))}
+                        </div>
+                    )}
+                    {children}
                 </div>
             </div>
         </section>

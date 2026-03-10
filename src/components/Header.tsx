@@ -35,6 +35,17 @@ const navItems = [
     ],
   },
   {
+    label: 'VA Loans',
+    href: '/home-loans/va-loans',
+    children: [
+      { label: 'VA Home Loans', href: '/home-loans/va-loans' },
+      { label: 'VA Refinance', href: '/refinance/va-irrrl' },
+      { label: 'VA IRRRL', href: '/refinance/va-irrrl' },
+      { label: 'VA Cash-Out Refinance', href: '/refinance/cash-out-refinance' },
+      { label: 'VA Eligibility Guide', href: '/borrower-solutions/veterans' },
+    ],
+  },
+  {
     label: 'Loan Programs',
     href: '/home-loans',
     children: [
@@ -130,7 +141,7 @@ export default function Header() {
                 {item.label}
                 {item.children && (
                   <svg className={styles.chevron} width="10" height="6" viewBox="0 0 10 6" fill="none">
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 )}
               </Link>
@@ -195,7 +206,7 @@ export default function Header() {
                       aria-label={`Expand ${item.label}`}
                     >
                       <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
-                        <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </button>
                   )}
