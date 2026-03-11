@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Hero from '@/components/Hero';
 import FeatureCards from '@/components/FeatureCards';
 import StatsBar from '@/components/StatsBar';
+import ReviewsBar from '@/components/ReviewsBar';
 import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
 import CTABanner from '@/components/CTABanner';
@@ -84,6 +85,9 @@ export default function HomePage() {
 
       {/* 2. Stats */}
       <StatsBar stats={stats} variant="dark" />
+
+      {/* 2b. Reviews Trust Bar */}
+      <ReviewsBar />
 
       {/* 3. Calculator Quick-Access */}
       <section className="section">

@@ -10,8 +10,15 @@ export const metadata: Metadata = {
 };
 
 const guides = [
+    { title: '📥 The Mortgage Game Plan', description: 'Free downloadable guide — from pre-approval to closing day. Enter your email to get it instantly.', href: '/resources/mortgage-game-plan', icon: '🎯', tag: 'Free Guide' },
+    { title: 'First-Time Homebuyer Guide', description: 'Everything first-time buyers need to know — loan programs, DPA, the buying process, and mistakes to avoid.', href: '/resources/first-time-homebuyer-guide', icon: '🏡', tag: 'Guide · 10 min read' },
     { title: 'How to Get Pre-Approved', description: 'Step-by-step guide to getting mortgage pre-approval — what you need, what to expect, and tips for success.', href: '/resources/how-to-get-pre-approved', icon: '📋', tag: 'Guide · 8 min read' },
-    { title: 'Understanding Mortgage Rates', description: 'Learn how mortgage rates work, what affects them, and strategies to get the best rate on your loan.', href: '/resources/understanding-mortgage-rates', icon: '📊', tag: 'Guide · 10 min read' },
+    { title: 'VA Loan Eligibility Guide', description: 'Complete guide to VA loan eligibility — service requirements, COE, surviving spouse benefits, and qualifying questions.', href: '/resources/va-loan-eligibility-guide', icon: '🎖️', tag: 'Guide · 10 min read' },
+    { title: 'Self-Employed Mortgage Guide', description: 'Bank statement loans, 1099 programs, P&L options, and tax strategies for self-employed borrowers.', href: '/resources/self-employed-mortgage-guide', icon: '💼', tag: 'Guide · 8 min read' },
+    { title: 'Credit Scores & Mortgages', description: 'How credit scores affect your mortgage rate, minimum scores by loan type, and tips to improve.', href: '/resources/credit-score-guide', icon: '📊', tag: 'Guide · 7 min read' },
+    { title: 'Understanding Closing Costs', description: 'Complete breakdown of closing costs — what they are, who pays, and how to reduce them.', href: '/resources/closing-costs-explained', icon: '💰', tag: 'Guide · 7 min read' },
+    { title: 'When to Refinance', description: 'Break-even analysis, rate thresholds, types of refinance, and 5 signs it is time to refinance.', href: '/resources/when-to-refinance', icon: '🔄', tag: 'Guide · 7 min read' },
+    { title: 'Understanding Mortgage Rates', description: 'Learn how mortgage rates work, what affects them, and strategies to get the best rate on your loan.', href: '/resources/understanding-mortgage-rates', icon: '📈', tag: 'Guide · 10 min read' },
     { title: 'Mortgage Glossary', description: 'Complete glossary of mortgage terms — 22+ definitions explained in plain language.', href: '/resources/mortgage-glossary', icon: '📖', tag: 'Reference' },
 ];
 
