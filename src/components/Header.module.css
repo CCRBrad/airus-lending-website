@@ -36,18 +36,12 @@
     flex-shrink: 0;
 }
 
-.logoIcon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.logoImg {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-navy) 100%);
-    color: var(--color-white);
-    font-weight: 800;
-    font-size: var(--font-size-xl);
     border-radius: var(--radius-md);
-    letter-spacing: -0.02em;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .logoText {

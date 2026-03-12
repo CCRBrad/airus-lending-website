@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Header.module.css';
 
 const navItems = [
@@ -122,7 +123,14 @@ export default function Header() {
       <div className={styles.inner}>
         {/* Logo */}
         <Link href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
-          <span className={styles.logoIcon}>A</span>
+          <Image
+            src="/logos/airus-icon.png"
+            alt="Airus Lending"
+            width={40}
+            height={40}
+            className={styles.logoImg}
+            priority
+          />
           <span className={styles.logoText}>
             Airus <span className={styles.logoTextBold}>Lending</span>
           </span>

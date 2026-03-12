@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const footerSections = [
@@ -128,8 +129,13 @@ export default function Footer() {
                     <div className={styles.bottomInner}>
                         <div className={styles.bottomLeft}>
                             <div className={styles.bottomLogo}>
-                                <span className={styles.logoIcon}>A</span>
-                                <span className={styles.logoText}>Airus Lending</span>
+                                <Image
+                                    src="/logos/airus-logo-full.png"
+                                    alt="Airus Lending"
+                                    width={140}
+                                    height={100}
+                                    className={styles.footerLogoImg}
+                                />
                             </div>
                             <p className={styles.nmls}>NMLS #XXXXXX</p>
                             <p className={styles.contactInfo}>📍 Atlanta, GA</p>

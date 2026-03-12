@@ -134,23 +134,18 @@
     font-size: var(--font-size-xs);
 }
 
-.logoIcon {
+.bottomLogo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-navy-light) 100%);
-    color: var(--color-white);
-    font-weight: 800;
-    border-radius: var(--radius-sm);
-    font-size: var(--font-size-sm);
+    gap: var(--space-3);
+    margin-bottom: var(--space-2);
 }
 
-.logoText {
-    color: var(--color-white);
-    font-weight: 600;
-    font-size: var(--font-size-base);
+.footerLogoImg {
+    width: 140px;
+    height: auto;
+    border-radius: var(--radius-md);
+    object-fit: contain;
 }
 
 .nmls {
