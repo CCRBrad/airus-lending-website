@@ -3,6 +3,9 @@ import Hero from '@/components/Hero';
 import FeatureCards from '@/components/FeatureCards';
 import StatsBar from '@/components/StatsBar';
 import ReviewsBar from '@/components/ReviewsBar';
+import RateInsights from '@/components/RateInsights';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
+import LeadMagnet from '@/components/LeadMagnet';
 import ProcessSteps from '@/components/ProcessSteps';
 import FAQ from '@/components/FAQ';
 import CTABanner from '@/components/CTABanner';
@@ -59,6 +62,10 @@ const faqItems = [
   { question: 'What credit score do I need to get a mortgage?', answer: 'It depends on the program. FHA allows scores as low as 580 (or 500 with 10% down). VA has no official minimum but most lenders use 580-620. Conventional typically requires 620+. DSCR and bank statement loans may accept 660+. Our advisors work with all credit ranges.' },
   { question: 'How fast can I close?', answer: 'Timeline depends on the loan program and complexity, but our average close time is about 21 days for straightforward transactions. Some programs like VA IRRRLs and FHA Streamlines may close even faster.' },
   { question: 'What down payment assistance programs are available?', answer: 'Many state and local programs offer grants, forgivable loans, and matched savings for down payments. FHA allows 3.5% down, VA and USDA offer 0% down. Our team will identify every program you qualify for based on your location and income.' },
+  { question: 'What are the minimum down payment requirements by loan type?', answer: 'Down payment minimums vary by program: VA and USDA loans require 0% down. FHA requires 3.5% (or 10% with lower credit scores). Conventional can go as low as 3% for first-time buyers. DSCR and investment property loans typically require 15–25%. Your advisor will walk through the options that fit your budget.' },
+  { question: 'How does the closing timeline work?', answer: 'After you go under contract, the typical closing process takes 21–30 days. Key milestones include the appraisal (days 3–7), underwriting review (days 7–14), conditional approval and clearing conditions (days 14–21), and final clear-to-close and funding. Your advisor manages every step and keeps you updated in real time.' },
+  { question: 'How do self-employed borrowers qualify for a mortgage?', answer: 'Self-employed borrowers can qualify through bank statement programs (using 12–24 months of personal or business statements), 1099-only documentation, asset depletion, or profit-and-loss statements. These programs focus on cash flow rather than tax returns, which often understate income for business owners.' },
+  { question: 'What are the specific requirements for a DSCR loan?', answer: 'DSCR loans typically require a minimum credit score of 660+, a 20–25% down payment, and a DSCR ratio of 1.0 or higher (meaning the property\'s rental income covers the mortgage payment). No personal income verification, tax returns, or employment history is needed — qualification is based entirely on the investment property\'s cash flow.' },
 ];
 
 const brokerBankRows = [
@@ -155,7 +162,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. VA Loan Spotlight */}
+      {/* 6a. Rate Insights */}
+      <RateInsights />
+
+      {/* 6b. VA Loan Spotlight */}
       <section className={styles.vaSection}>
         <div className="container">
           <div className={styles.vaInner}>
@@ -252,7 +262,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. Why Airus */}
+      {/* 9. Testimonial Carousel */}
+      <TestimonialCarousel />
+
+      {/* 10. Lead Magnet */}
+      <LeadMagnet />
+
+      {/* 11. Why Airus */}
       <section className="section">
         <div className="container">
           <div className={styles.sectionHeader}>
