@@ -137,7 +137,7 @@ export default function Footer() {
                                     className={styles.footerLogoImg}
                                 />
                             </div>
-                            <p className={styles.nmls}>NMLS #XXXXXX</p>
+                            <p className={styles.nmls}>NMLS #2187418</p>
                             <p className={styles.contactInfo}>📍 Atlanta, GA</p>
                             <p className={styles.contactInfo}>📞 (555) 000-0000</p>
                             <p className={styles.contactInfo}>✉️ info@airuslending.com</p>
@@ -160,7 +160,7 @@ export default function Footer() {
                     {/* Licensed States */}
                     <div className={styles.licensedStates}>
                         <p className={styles.licensedTitle}>Licensed in:</p>
-                        <p className={styles.statesList}>GA • CA • TX • FL • NC • SC • VA • MD • CO • TN • AL • OH • PA • NY • NJ</p>
+                        <p className={styles.statesList}>CA • FL • TX • WA • CO • AZ • GA</p>
                     </div>
 
                     <div className={styles.disclaimer}>

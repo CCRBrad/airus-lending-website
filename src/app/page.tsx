@@ -82,9 +82,9 @@ export default function HomePage() {
       {/* 1. Hero with Trust Badges */}
       <Hero
         variant="home"
-        badge="Licensed Mortgage Broker • 50+ Lender Partners"
-        title="Find the Right Mortgage —Not Just Any Mortgage"
-        subtitle="Compare loan options from 50+ lenders with a dedicated mortgage advisor guiding you from application to closing."
+        badge="Licensed Mortgage Broker • NMLS #2187418"
+        title={'Find the Right Mortgage.\nNot Just Any Mortgage.'}
+        subtitle="Airus Lending shops 50+ lenders to match you with the best rates, programs, and approvals for your situation."
         primaryCTA={{ label: 'Get Pre-Approved', href: '/get-pre-approved' }}
         secondaryCTA={{ label: 'Talk to an Advisor', href: '/book-consultation' }}
         trustBadges={['VA Loans', 'FHA', 'Conventional', 'DSCR', 'Bank Statement', 'SBA', 'Non-QM']}

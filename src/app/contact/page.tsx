@@ -117,7 +117,7 @@ export default function ContactPage() {
                             </div>
 
                             <div className={styles.nmlsBadge}>
-                                <p>NMLS #XXXXXX</p>
+                                <p>NMLS #2187418</p>
                                 <Link href="/licensing">View Licensing & Disclosures</Link>
                             </div>
                         </div>

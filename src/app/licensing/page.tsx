@@ -12,9 +12,9 @@ export default function LicensingPage() {
 
                 <section>
                     <h2>Company Information</h2>
-                    <p>Airus Lending is a mortgage broker/lender. NMLS# 0000000. Equal Housing Lender.</p>
-                    <p>Corporate Office: [Address], [City], [State] [Zip]</p>
-                    <p>Phone: (800) 555-0199 | Email: info@airuslending.com</p>
+                    <p>Airus Lending is a licensed mortgage broker. NMLS #2187418. Equal Housing Lender.</p>
+                    <p>Corporate Office: Atlanta, GA</p>
+                    <p>Phone: (555) 000-0000 | Email: info@airuslending.com</p>
                 </section>
 
                 <section>
@@ -24,7 +24,17 @@ export default function LicensingPage() {
 
                 <section>
                     <h2>State Licensing</h2>
-                    <p>Airus Lending is licensed to operate in the following states. Specific licensing details vary by state. Contact us for state-specific licensing information.</p>
+                    <p>Airus Lending is licensed to originate consumer residential mortgages in the following states:</p>
+                    <ul>
+                        <li>California</li>
+                        <li>Florida</li>
+                        <li>Texas</li>
+                        <li>Washington</li>
+                        <li>Colorado</li>
+                        <li>Arizona</li>
+                        <li>Georgia</li>
+                    </ul>
+                    <p>Certain business-purpose loans, including DSCR and commercial real estate financing, may be available in additional states through approved lending partners.</p>
                 </section>
 
                 <section>

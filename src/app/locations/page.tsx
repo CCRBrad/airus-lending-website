@@ -5,25 +5,17 @@ import CTABanner from '@/components/CTABanner';
 
 export const metadata: Metadata = {
     title: 'Locations We Serve | Airus Lending',
-    description: 'Airus Lending is licensed in 15+ states. Find your state and explore mortgage options available in your area.',
+    description: 'Airus Lending is licensed in 7 states: CA, FL, TX, WA, CO, AZ, GA. Find your state and explore mortgage options available in your area.',
 };
 
 const states = [
-    { name: 'Georgia', code: 'GA', href: '/locations/georgia', highlight: 'Headquarters' },
     { name: 'California', code: 'CA', href: '/locations/california', highlight: 'High-cost markets' },
-    { name: 'Texas', code: 'TX', href: '/locations/texas', highlight: 'No state income tax' },
     { name: 'Florida', code: 'FL', href: '/locations/florida', highlight: 'No state income tax' },
-    { name: 'Virginia', code: 'VA', href: '/locations/georgia', highlight: '' },
-    { name: 'North Carolina', code: 'NC', href: '/locations/georgia', highlight: '' },
-    { name: 'South Carolina', code: 'SC', href: '/locations/georgia', highlight: '' },
-    { name: 'Tennessee', code: 'TN', href: '/locations/georgia', highlight: '' },
-    { name: 'Alabama', code: 'AL', href: '/locations/georgia', highlight: '' },
-    { name: 'Colorado', code: 'CO', href: '/locations/georgia', highlight: '' },
-    { name: 'Arizona', code: 'AZ', href: '/locations/georgia', highlight: '' },
-    { name: 'Maryland', code: 'MD', href: '/locations/georgia', highlight: '' },
-    { name: 'Ohio', code: 'OH', href: '/locations/georgia', highlight: '' },
-    { name: 'Michigan', code: 'MI', href: '/locations/georgia', highlight: '' },
-    { name: 'Illinois', code: 'IL', href: '/locations/georgia', highlight: '' },
+    { name: 'Texas', code: 'TX', href: '/locations/texas', highlight: 'No state income tax' },
+    { name: 'Washington', code: 'WA', href: '/locations/washington', highlight: 'Seattle & Puget Sound' },
+    { name: 'Colorado', code: 'CO', href: '/locations/colorado', highlight: 'Denver & Front Range' },
+    { name: 'Arizona', code: 'AZ', href: '/locations/arizona', highlight: 'Phoenix & Scottsdale' },
+    { name: 'Georgia', code: 'GA', href: '/locations/georgia', highlight: 'Headquarters' },
 ];
 
 export default function LocationsPage() {
@@ -33,7 +25,7 @@ export default function LocationsPage() {
                 variant="dark"
                 badge="Nationwide Lending"
                 title="States We Serve"
-                subtitle="Airus Lending is licensed in 15+ states. Click your state to explore local mortgage options, programs, and expert guidance."
+                subtitle="Airus Lending is licensed in 7 states for residential mortgage lending. DSCR and commercial loans available in 40+ states."
                 primaryCTA={{ label: 'Get Pre-Approved', href: '/get-pre-approved' }}
                 secondaryCTA={{ label: 'Book a Consultation', href: '/book-consultation' }}
             />

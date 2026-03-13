@@ -30,7 +30,11 @@ export default function Hero({
             <div className="container">
                 <div className={styles.content}>
                     {badge && <span className={styles.badge}>{badge}</span>}
-                    <h1 className={styles.title}>{title}</h1>
+                    <h1 className={styles.title}>
+                        {title.split('\n').map((line, i, arr) => (
+                            <span key={i}>{line}{i < arr.length - 1 && <br />}</span>
+                        ))}
+                    </h1>
                     <p className={styles.subtitle}>{subtitle}</p>
                     <div className={styles.actions}>
                         {primaryCTA && (

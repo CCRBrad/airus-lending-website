@@ -36,17 +36,6 @@ const navItems = [
     ],
   },
   {
-    label: 'VA Loans',
-    href: '/home-loans/va-loans',
-    children: [
-      { label: 'VA Home Loans', href: '/home-loans/va-loans' },
-      { label: 'VA Refinance', href: '/refinance/va-irrrl' },
-      { label: 'VA IRRRL', href: '/refinance/va-irrrl' },
-      { label: 'VA Cash-Out Refinance', href: '/refinance/cash-out-refinance' },
-      { label: 'VA Eligibility Guide', href: '/borrower-solutions/veterans' },
-    ],
-  },
-  {
     label: 'Loan Programs',
     href: '/home-loans',
     children: [
@@ -60,6 +49,18 @@ const navItems = [
       { label: 'Bank Statement Loans', href: '/home-loans/bank-statement-loans' },
       { label: 'ITIN Loans', href: '/home-loans/itin-loans' },
       { label: 'View All Programs →', href: '/home-loans' },
+    ],
+  },
+  {
+    label: 'Investor Loans',
+    href: '/investor-loans',
+    children: [
+      { label: 'DSCR Loans', href: '/home-loans/dscr-loans' },
+      { label: 'Rental Property Loans', href: '/investor-loans/rental-property-loans' },
+      { label: 'Fix & Flip Loans', href: '/commercial-loans/fix-and-flip' },
+      { label: 'Bridge Loans', href: '/home-loans/bridge-loans' },
+      { label: 'Portfolio Loans', href: '/investor-loans/portfolio-loans' },
+      { label: 'Bank Statement Loans', href: '/home-loans/bank-statement-loans' },
     ],
   },
   {
@@ -83,17 +84,30 @@ const navItems = [
       { label: 'Affordability Calculator', href: '/calculators/home-affordability-calculator' },
       { label: 'Refinance Calculator', href: '/calculators/refinance-calculator' },
       { label: 'DSCR Calculator', href: '/calculators/dscr-calculator' },
+      { label: 'DTI Calculator', href: '/calculators/dti-calculator' },
       { label: 'Amortization Schedule', href: '/calculators/amortization-calculator' },
       { label: 'All Calculators →', href: '/calculators' },
     ],
   },
   {
-    label: 'Resources',
+    label: 'Learning Center',
     href: '/resources',
+    children: [
+      { label: 'All Guides & Articles', href: '/resources' },
+      { label: 'VA Loan Hub', href: '/va-loans' },
+      { label: 'First-Time Homebuyer Guide', href: '/resources/first-time-homebuyer-guide' },
+      { label: 'Self-Employed Guide', href: '/resources/self-employed-mortgage-guide' },
+      { label: 'Mortgage Glossary', href: '/resources/mortgage-glossary' },
+      { label: 'Mortgage Game Plan', href: '/resources/mortgage-game-plan' },
+    ],
   },
   {
     label: 'About',
     href: '/about',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
   },
 ];
 

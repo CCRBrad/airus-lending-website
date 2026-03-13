@@ -119,7 +119,7 @@ export default function PreApprovalPage() {
                                 <p className={styles.disclaimer}>
                                     This is not a formal loan application. Submitting this form does not trigger a hard credit pull.
                                     A licensed mortgage advisor will review your information and contact you to discuss your options.
-                                    By submitting, you consent to being contacted by Airus Lending. NMLS #XXXXXX.
+                                    By submitting, you consent to being contacted by Airus Lending. NMLS #2187418.
                                 </p>
                             </form>
                         </div>
